@@ -1,6 +1,6 @@
 Chosen.scss
 ===========
-Chosen.scss is a compass implementation of [Chosen][http://harvesthq.github.com/chosen/]. It is currently based on Chosen `0.9.7`
+Chosen.scss is a compass implementation of [Chosen](http://harvesthq.github.com/chosen/). It is currently based on Chosen `0.9.7`
 This is currently in version `1.0.5beta` but *is* _production ready_
 
 Installation
