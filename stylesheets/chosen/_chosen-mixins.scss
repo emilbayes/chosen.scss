@@ -1,3 +1,6 @@
+@import "compass/utilities/general/hacks";
+@import "compass/css3/images";
+
 @mixin linear-gradient($colorStops, $direction: top, $legacyColorStop: 1, $ieColorStops: '')
 {
 	@if $ieColorStops == ''
