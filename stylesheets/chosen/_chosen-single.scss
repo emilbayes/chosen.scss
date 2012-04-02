@@ -1,0 +1,116 @@
+@import "compass/css3/box-shadow";
+
+@import "compass/css3/images";
+@import "compass/css3/background-clip";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+$use-mozilla-ellipsis-binding: true;
+
+@import "compass/typography/text/ellipsis";
+
+.chzn-container-single {
+	.chzn-single {
+		@include linear-gradient((#fff 20%, #f6f6f6 50%, #eee 50%, #f4f4f4 100%));
+		@include border-radius(5px);
+		@include background-clip;
+		border: 1px solid #aaa;
+		@include box-shadow(0 0 3px #fff inset, 0 1px 1px rgba(0,0,0,0.1));
+		color: #444;
+		text-decoration: none;
+
+		@include block(auto 23px);
+		line-height: 24px;
+		padding: 0 0 0 8px;
+
+		overflow: hidden;
+		white-space: nowrap;
+		position: relative;
+
+		span {
+			margin-right: 26px;
+			display: block;
+			@include ellipsis;
+		}
+		abbr {
+			@include block(12px 13px);
+			@include absolute(top 6px right 26px);
+			font-size: 1px;
+			background: image-url('chosen/chosen-sprite.png') right top no-repeat;
+			&:hover {
+				background-position:right -11px;
+			}
+		}
+		div {
+			@include absolute(top right);
+			@include block(18px 100%);
+
+			b {
+				background: image-url('chosen/chosen-sprite.png') 0 0 no-repeat;
+				@include block;
+			}
+		}
+	}
+
+	.chzn-search {
+			padding: 3px 4px;
+			position: relative;
+			margin: 0;
+			white-space: nowrap;
+			z-index: 1010;
+
+			input {
+				background: #fff image-url('chosen/chosen-sprite.png') 100% -22px no-repeat;
+				@include background(
+					image-url('chosen/chosen-sprite.png') 100% -22px no-repeat, 
+					linear-gradient(top, #eee 1%, #fff 15%));
+				margin: 1px 0;
+				padding: 4px 20px 4px 5px;
+				outline: 0;
+				border: 1px solid #aaa;
+				font: {
+					family: sans-serif;
+				    size: 1em;
+				}
+
+			}
+		}
+
+		.chzn-drop {
+			@include border-radius(0 0 4px 4px);
+			@include background-clip;
+		}
+}
+
+.chzn-container-single-nosearch .chzn-search input {
+	@include absolute(left -9000px);
+}
+
+.chzn-container-active {
+	.chzn-single {
+		@include box-shadow(0 0 5px rgba(0,0,0, .3));
+		border: 1px solid #5897fb;
+	}
+	.chzn-single-with-drop {
+		border: 1px solid #aaa;
+		@include box-shadow(0 1px 0 #fff inset);
+		@include linear-gradient((#eee 20%, #fff 80%));
+		@include border-bottom-left-radius(0);
+		@include border-bottom-right-radius(0);
+
+		div {
+			background: transparent;
+			border-left: none;
+
+			b {
+				background-position:-18px -1px;
+			}
+		}
+	}
+}
+
+.chzn-disabled {
+	.chzn-single {
+		cursor: default;
+	}
+}

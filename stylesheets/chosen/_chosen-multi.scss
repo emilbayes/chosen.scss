@@ -1,0 +1,100 @@
+.chzn-container-multi {
+	@include linear-gradient((#eee 1%, #fff 15%));
+	border: 1px solid #aaa;
+	margin: 0;
+	padding: 0;
+	cursor: text;
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	position: relative;
+
+	.chzn-choices {
+		li {
+			float: left;
+			list-style: none;
+		}
+		.search-field {
+			white-space: nowrap;
+			margin: 0;
+			padding: 0;
+
+			input {
+				color: #666;
+				background: transparent !important;
+				border: 0 !important;
+				font {
+					family: sans-serif;
+					size: 100%;
+				}
+				height: 15px;
+				padding: 5px;
+				margin: 1px 0;
+				outline: 0;
+				@include box-shadow(none);
+			}
+			.default {
+				color: #999;
+			}
+		}
+		.search-choice {
+			@include border-radius(3px);
+			@include background-clip;
+			@include linear-gradient((#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
+			@include box-shadow(0 0 2px #fff inset, 0 1px 0 rgba(0,0,0,.05));
+			color: #333;
+			border: 1px solid #aaa;
+			line-height: 13px;
+			padding: 3px 20px 3px 5px;
+			margin: 3px 0 3px 5px;
+			position: relative;
+			cursor: default;
+
+			.search-choice-close {
+				@include block(12px 13px);
+				@include absolute(top 4px right 3px);
+				font-size: 1px;
+				background: image-url('chosen/chosen-sprite.png') right top no-repeat;
+
+				&:hover {
+					background-position: right -11px;
+				}
+			}
+		}
+		.search-choice-focus {
+			background: #d4d4d4;
+			
+			.search-choice-close {
+				background-position: right -11px;
+			}
+		}
+
+		.chzn-drop {
+			.result-selected {
+				display: none;
+			}
+		}
+	}
+
+	.chzn-results {
+		margin: -1px 0 0;
+		padding: 0;
+	}
+}
+
+.chzn-container-active {
+	.chzn-choices {
+		@include box-shadow(0 0 5px rgba(0,0,0,.3));
+		border: 1px solid #5897fb;
+
+		.search-field input {
+			color: #111 !important;
+		}
+	}
+}
+
+.chzn-disabled {
+	.chzn-choices .search-choice .search-choice-close {
+		cursor: default;
+	}
+}

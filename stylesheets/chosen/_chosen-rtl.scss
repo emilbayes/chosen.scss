@@ -1,0 +1,58 @@
+.chzn-rtl {
+	text-align: right;
+
+	.chzn-single {
+		padding: 0 8px 0 0;
+		overflow: visible;
+
+		span {
+			margin-left: 26px;
+			margin-right: 0;
+			direction: rtl;
+		}
+		div {
+			left: 3px;
+			right: auto;
+		}
+		abbr {
+			left: 26px;
+			right: auto;
+		}
+	}
+
+	.chzn-choices {
+		.search-field input {
+			direction: rtl;
+		}
+		li {
+			float: right;
+		}
+		.search-choice {
+			padding: 3px 5px 3px 19px;
+			margin: 3px 5px 3px 0;
+			.search-choice-close {
+				left: 4px;
+				right: auto;
+				background-position:right top;
+			}
+		}
+	}
+
+	&.chzn-container-single .chzn-results {
+		margin: 0 0 4px 4px;
+		padding: 0 4px 0 0;
+	}
+
+	.chzn-results .group-option {
+		padding-left: 0;
+		padding-right: 15px;
+	}
+
+	&.chzn-container-active .chzn-single-with-drop div { border-right: none;}
+
+	.chzn-search input {
+		padding: 4px 5px 4px 20px;
+		direction: rtl;
+		@include background(image-url('chosen/chosen-sprite.png') -38 -22px no-repeat, linear-gradient(top, #eee 1%, #fff 15%));
+	}
+}

@@ -1,0 +1,62 @@
+@mixin linear-gradient($colorStops, $direction: top, $legacyColorStop: 1, $ieColorStops: '')
+{
+	@if $ieColorStops == ''
+	{
+		$ieColorStops: 1 length($colorStops);
+	}
+
+	$ieGradientType: if($direction == top or $direction == bottom, 0, 1);
+
+	background-color: nth(nth($colorStops, $legacyColorStop), 1);
+	@include has-layout;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(nth(nth($colorStops, nth($ieColorStops, 1)), 1))}', endColorstr='#{ie-hex-str(nth(nth($colorStops, nth($ieColorStops, 2)), 1))}', GradientType=#{$ieGradientType});   
+	@include background(linear-gradient($direction, $colorStops));
+}
+
+@mixin dimensions($dimensions)
+{
+	width: nth($dimensions, 1);
+	height: nth($dimensions, 2);
+}
+
+@mixin block($dimensions: 100% 100%)
+{
+	display: block;
+	@include dimensions($dimensions);
+}
+
+@mixin pos($type, $position)
+{
+	position: unquote($type);
+	@for $i from 1 through length($position)
+	{
+		@if type-of(nth($position, $i)) != 'number'
+		{
+			$coord: 0;
+			$tmp: $i;
+
+			@if $i < length($position) and type-of(nth($position, $i+1)) != 'string'
+			{
+				$coord: nth($position, $i+1);
+				$tmp: $i + 1;
+			}
+
+			#{nth($position, $i)}: $coord;
+			$i: $tmp;
+		}
+	}
+}
+	
+
+@mixin fixed($position)
+{
+	@include pos('fixed', $position);
+}
+@mixin absolute($position)
+{
+	@include pos('absolute', $position);
+}
+@mixin relative($position)
+{
+	@include pos('relative', $position);
+}

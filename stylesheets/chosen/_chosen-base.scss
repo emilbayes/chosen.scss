@@ -1,0 +1,99 @@
+@import "compass/css3/inline-block";
+@import "compass/css3/box-shadow";
+@import "chosen-mixins";
+
+.chzn-container {
+	font-size: 13px;
+	position: relative;
+	@include inline-block;
+	margin: 2px 0 9px 0;
+
+	.chzn-drop {
+		background: #fff;
+		border: 1px solid #aaa;
+		border-top: 0;
+		@include absolute(top 29px left);
+		@include box-shadow(0 4px 5px rgba(0,0,0,.15));
+		z-index: 999;
+	}
+
+	.chzn-results {
+		margin: 0 4px 4px 0;
+		max-height: 240px;
+		padding: 0 0 0 4px;
+		position: relative;
+		overflow: {x: hidden; y: auto;}
+
+		li {
+			display: none;
+			line-height: 15px;
+			padding: 5px 6px;
+			margin: 0;
+			list-style: none;
+			
+			em {
+				background: #feffde;
+				font-style: normal;
+			}
+		}
+		.active-result {
+			cursor: pointer;
+			display: list-item;
+		}
+		.highlighted {
+			@include linear-gradient((#3875d7 20%, #2a62bc 90%));
+			color: #fff;
+
+			em {
+				background: transparent;
+			}
+		}
+		.no-results {
+			background: #f4f4f4;
+			display: list-item;
+		}
+		.group-result {
+			cursor: default;
+			color: #999;
+			font-weight: bold;
+		}
+		.group-option {
+			padding-left: 15px;
+		}
+	}
+
+	.chzn-results-scroll {
+		background: #fff;
+		margin: 0 4px;
+		position: absolute;
+		text-align: center;
+		width: 321px; /* This should be dynamic with js */
+		z-index: 1;
+
+		span {
+			@include inline-block;
+			@include dimensions(9px 17px);
+			text-indent: -5000px;
+		}
+
+	}
+
+	.chzn-results-scroll-down {
+		bottom: 0;
+
+		span {
+			background: image-url('chosen/chosen-sprite.png') -4px -3px no-repeat;
+		}
+	}
+
+	.chzn-results-scroll-up {
+		span {
+			background: image-url('chosen/chosen-sprite.png') -22px -3px no-repeat;
+		}
+	}
+}
+
+.chzn-disabled {
+	cursor: default;
+	opacity: 0.5 !important;
+}
