@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "1.0.5beta"
+  s.version = "1.0.6beta"
   s.date = "2012-04-02"
 
   # Gem Details
   s.name = "chosen.scss"
   s.authors = ["Emil Melgaard"]
-  s.summary = %q{A sass implementation of Chosen for Compass}
-  s.description = %q{A sass implementation of Chosen for Compass}
+  s.summary = %q{Chosen.scss is a compass implementation of Chosen}
+  s.description = %q{Read more over at github: https://github.com/tixz/chosen.scss}
   s.email = "compass@tixz.dk"
   s.homepage = "http://tixz.dk/"
 

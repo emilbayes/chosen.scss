@@ -1,7 +1,7 @@
 Chosen.scss
 ===========
 Chosen.scss is a compass implementation of [Chosen](http://harvesthq.github.com/chosen/). It is currently based on Chosen `0.9.7`
-This is currently in version `1.0.5beta` but *is* __production ready__
+This is currently in version [`1.0.5beta`](https://rubygems.org/gems/chosen.scss) but *is* __production ready__
 
 Installation
 ------------
