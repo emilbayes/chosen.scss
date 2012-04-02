@@ -41,14 +41,17 @@ They are as follows:
 ####`linear-gradient($colorStops, $direction: top, $legacyColorStop: 1, $ieColorStops: '')`
 #####Params:
 `$colorStops`: A list of color stops and their position
+
 `$direction`: `top|bottom|left|right`
+
 `$legacyColorStop`: index in the list that will be used as background-color
+
 `$ieColorStops`: The two color stops from the list that will be used for IE. Default is first and last. Other Example: ´2 4´. This should be a SASS list
 #####Example:
 
 	@include linear-gradient((#f00 0%, #0f0 50%, #00f 100%), top, 1, 1 2); //Uses the first and second color stop for IE
 
-
+* * *
 
 ####`dimensions($dimensions)`
 #####Params:
@@ -57,14 +60,14 @@ They are as follows:
 
 	@include dimensions(200px auto); //200px wide, height auto
 
-
+* * *
 
 ####`block($dimensions)`
-Adds display:block to above mixin. Made for ease of reading scss styles.
+Adds display:block;` to above mixin. Made for ease of reading scss styles.
 #####Params:
 see dimensions mixin
 
-
+* * *
 
 ####`pos($type, $position)`
 Inspired by Stylus Compass equivilant nib's pos mixin
@@ -72,7 +75,7 @@ Inspired by Stylus Compass equivilant nib's pos mixin
 `$type`: `absolute|fixed|relative|static|inherit`
 `$position`: List of positions. See examples for `absolute()`, `fixed()`, `relative()`
 
-
+* * *
 
 ####`fixed($position)`, `relative($position)`, `absolute($position)`
 All 'child' mixins of `pos()`. Made for ease of reading scss styles.
