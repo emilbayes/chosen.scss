@@ -38,7 +38,7 @@ chosen-mixins
 Be aware that chosen.css comes with a set of predefined mixins that are needed internally.
 They are as follows:
 
-####linear-gradient($colorStops, $direction: top, $legacyColorStop: 1, $ieColorStops: '')
+####`linear-gradient($colorStops, $direction: top, $legacyColorStop: 1, $ieColorStops: '')`
 #####Params:
 `$colorStops`: A list of color stops and their position
 `$direction`: `top|bottom|left|right`
@@ -48,25 +48,33 @@ They are as follows:
 
 	@include linear-gradient((#f00 0%, #0f0 50%, #00f 100%), top, 1, 1 2); //Uses the first and second color stop for IE
 
-####dimensions($dimensions)
+
+
+####`dimensions($dimensions)`
 #####Params:
 `$dimensions`: A list with width and then height.
 #####Example:
 
 	@include dimensions(200px auto); //200px wide, height auto
 
-####block($dimensions)
+
+
+####`block($dimensions)`
 Adds display:block to above mixin. Made for ease of reading scss styles.
 #####Params:
 see dimensions mixin
 
-####pos($type, $position)
+
+
+####`pos($type, $position)`
 Inspired by Stylus Compass equivilant nib's pos mixin
 #####Params:
 `$type`: `absolute|fixed|relative|static|inherit`
 `$position`: List of positions. See examples for `absolute()`, `fixed()`, `relative()`
 
-####fixed($position)`, `relative($position)`, `absolute($position)
+
+
+####`fixed($position)`, `relative($position)`, `absolute($position)`
 All 'child' mixins of `pos()`. Made for ease of reading scss styles.
 Example(s):
 
