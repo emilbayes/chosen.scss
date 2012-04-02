@@ -46,6 +46,7 @@ They are as follows:
 * `$direction`: `top|bottom|left|right`
 * `$legacyColorStop`: index in the list that will be used as background-color
 * `$ieColorStops`: The two color stops from the list that will be used for IE. Default is first and last. Other Example: ´2 4´. This should be a SASS list
+
 #####Example:
 
 	@include linear-gradient((#f00 0%, #0f0 50%, #00f 100%), top, 1, 1 2); //Uses the first and second color stop for IE
@@ -55,6 +56,7 @@ They are as follows:
 ####`dimensions($dimensions)`
 #####Params:
 * `$dimensions`: A list with width and then height.
+
 #####Example:
 
 	@include dimensions(200px auto); //200px wide, height auto
