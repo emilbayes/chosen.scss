@@ -1,6 +1,6 @@
 Chosen.scss
 ===========
-Chosen.scss is a compass implementation of [Chosen][http://harvesthq.github.com/chosen/]. It is currently based on Chosen _`0.9.7`_
+Chosen.scss is a compass implementation of [Chosen][http://harvesthq.github.com/chosen/]. It is currently based on Chosen _`0.9.7` _
 This is currently in version `1.0.5beta` but *is* _production ready_
 
 Installation
@@ -38,7 +38,7 @@ chosen-mixins
 Be aware that chosen.css comes with a set of predefined mixins that are needed internally.
 They are as follows:
 
-####`linear-gradient($colorStops, $direction: top, $legacyColorStop: 1, $ieColorStops: '')
+####`linear-gradient($colorStops, $direction: top, $legacyColorStop: 1, $ieColorStops: '')`
 #####Params:
 `$colorStops`: A list of color stops and their position
 `$direction`: `top|bottom|left|right`
