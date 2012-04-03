@@ -11,7 +11,7 @@ $use-mozilla-ellipsis-binding: true;
 
 .chzn-container-single {
 	.chzn-single {
-		@include linear-gradient((#fff 20%, #f6f6f6 50%, #eee 50%, #f4f4f4 100%));
+		@include linear-gradient((#fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%), top, 1, 1 3);
 		@include border-radius(5px);
 		@include background-clip;
 		border: 1px solid #aaa;
@@ -103,7 +103,7 @@ $use-mozilla-ellipsis-binding: true;
 			border-left: none;
 
 			b {
-				background-position:-18px -1px;
+				background-position:-18px 1px;
 			}
 		}
 	}

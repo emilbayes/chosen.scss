@@ -1,15 +1,15 @@
 .chzn-container-multi {
-	@include linear-gradient((#eee 1%, #fff 15%));
-	border: 1px solid #aaa;
-	margin: 0;
-	padding: 0;
-	cursor: text;
-	overflow: hidden;
-	height: auto !important;
-	height: 1%;
-	position: relative;
-
 	.chzn-choices {
+		@include linear-gradient((#eee 1%, #fff 15%));
+		border: 1px solid #aaa;
+		margin: 0;
+		padding: 0;
+		cursor: text;
+		overflow: hidden;
+		height: auto !important;
+		height: 1%;
+		position: relative;
+		
 		li {
 			float: left;
 			list-style: none;
@@ -68,11 +68,11 @@
 				background-position: right -11px;
 			}
 		}
+	}
 
-		.chzn-drop {
-			.result-selected {
-				display: none;
-			}
+	.chzn-drop {
+		.result-selected {
+			display: none;
 		}
 	}
 
