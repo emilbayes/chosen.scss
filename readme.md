@@ -7,7 +7,7 @@ Installation
 ------------
 Install the gem:
 
-    gem install compass.scss --pre
+    gem install compass.scss
 
 Add the following line to the top of your `config.rb`:
 
