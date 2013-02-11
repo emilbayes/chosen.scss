@@ -9,8 +9,8 @@ $use-mozilla-ellipsis-binding: true;
 
 @import "compass/typography/text/ellipsis";
 
-.chzn-container-single {
-	.chzn-single {
+.#{$base-class}-container-single {
+	.#{$base-class}-single {
 		@include linear-gradient((#fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%), top, 1, 1 3);
 		@include border-radius(5px);
 		@include background-clip;
@@ -52,7 +52,7 @@ $use-mozilla-ellipsis-binding: true;
 		}
 	}
 
-	.chzn-search {
+	.#{$base-class}-search {
 			padding: 3px 4px;
 			position: relative;
 			margin: 0;
@@ -62,7 +62,7 @@ $use-mozilla-ellipsis-binding: true;
 			input {
 				background: #fff image-url('chosen/chosen-sprite.png') 100% -22px no-repeat;
 				@include background(
-					image-url('chosen/chosen-sprite.png') 100% -22px no-repeat, 
+					image-url('chosen/chosen-sprite.png') 100% -22px no-repeat,
 					linear-gradient(top, #eee 1%, #fff 15%));
 				margin: 1px 0;
 				padding: 4px 20px 4px 5px;
@@ -76,22 +76,22 @@ $use-mozilla-ellipsis-binding: true;
 			}
 		}
 
-		.chzn-drop {
+		.#{$base-class}-drop {
 			@include border-radius(0 0 4px 4px);
 			@include background-clip;
 		}
 }
 
-.chzn-container-single-nosearch .chzn-search input {
+.#{$base-class}-container-single-nosearch .#{$base-class}-search input {
 	@include absolute(left -9000px);
 }
 
-.chzn-container-active {
-	.chzn-single {
+.#{$base-class}-container-active {
+	.#{$base-class}-single {
 		@include box-shadow(0 0 5px rgba(0,0,0, .3));
 		border: 1px solid #5897fb;
 	}
-	.chzn-single-with-drop {
+	.#{$base-class}-single-with-drop {
 		border: 1px solid #aaa;
 		@include box-shadow(0 1px 0 #fff inset);
 		@include linear-gradient((#eee 20%, #fff 80%));
@@ -109,8 +109,8 @@ $use-mozilla-ellipsis-binding: true;
 	}
 }
 
-.chzn-disabled {
-	.chzn-single {
+.#{$base-class}-disabled {
+	.#{$base-class}-single {
 		cursor: default;
 	}
 }

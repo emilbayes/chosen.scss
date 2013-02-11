@@ -2,12 +2,12 @@
 @import "compass/css3/box-shadow";
 @import "chosen-mixins";
 
-.chzn-container {
+.#{$base-class}-container {
 	font-size: 13px;
 	position: relative;
 	@include inline-block;
 
-	.chzn-drop {
+	.#{$base-class}-drop {
 		background: #fff;
 		border: 1px solid #aaa;
 		border-top: 0;
@@ -16,7 +16,7 @@
 		z-index: 999;
 	}
 
-	.chzn-results {
+	.#{$base-class}-results {
 		margin: 0 4px 4px 0;
 		max-height: 240px;
 		padding: 0 0 0 4px;
@@ -29,7 +29,7 @@
 			padding: 5px 6px;
 			margin: 0;
 			list-style: none;
-			
+
 			em {
 				background: #feffde;
 				font-style: normal;
@@ -61,7 +61,7 @@
 		}
 	}
 
-	.chzn-results-scroll {
+	.#{$base-class}-results-scroll {
 		background: #fff;
 		margin: 0 4px;
 		position: absolute;
@@ -77,7 +77,7 @@
 
 	}
 
-	.chzn-results-scroll-down {
+	.#{$base-class}-results-scroll-down {
 		bottom: 0;
 
 		span {
@@ -85,14 +85,14 @@
 		}
 	}
 
-	.chzn-results-scroll-up {
+	.#{$base-class}-results-scroll-up {
 		span {
 			background: image-url('chosen/chosen-sprite.png') -22px -3px no-repeat;
 		}
 	}
 }
 
-.chzn-disabled {
+.#{$base-class}-disabled {
 	cursor: default;
 	opacity: 0.5 !important;
 }

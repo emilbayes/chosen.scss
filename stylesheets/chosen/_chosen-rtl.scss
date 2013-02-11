@@ -1,7 +1,7 @@
-.chzn-rtl {
+.#{$base-class}-rtl {
 	text-align: right;
 
-	.chzn-single {
+	.#{$base-class}-single {
 		padding: 0 8px 0 0;
 		overflow: visible;
 
@@ -20,7 +20,7 @@
 		}
 	}
 
-	.chzn-choices {
+	.#{$base-class}-choices {
 		.search-field input {
 			direction: rtl;
 		}
@@ -38,19 +38,19 @@
 		}
 	}
 
-	&.chzn-container-single .chzn-results {
+	&.#{$base-class}-container-single .#{$base-class}-results {
 		margin: 0 0 4px 4px;
 		padding: 0 4px 0 0;
 	}
 
-	.chzn-results .group-option {
+	.#{$base-class}-results .group-option {
 		padding-left: 0;
 		padding-right: 15px;
 	}
 
-	&.chzn-container-active .chzn-single-with-drop div { border-right: none;}
+	&.#{$base-class}-container-active .#{$base-class}-single-with-drop div { border-right: none;}
 
-	.chzn-search input {
+	.#{$base-class}-search input {
 		padding: 4px 5px 4px 20px;
 		direction: rtl;
 		@include background(image-url('chosen/chosen-sprite.png') -38 -22px no-repeat, linear-gradient(top, #eee 1%, #fff 15%));

@@ -1,5 +1,5 @@
-.chzn-container-multi {
-	.chzn-choices {
+.#{$base-class}-container-multi {
+	.#{$base-class}-choices {
 		@include linear-gradient((#eee 1%, #fff 15%));
 		border: 1px solid #aaa;
 		margin: 0;
@@ -9,7 +9,7 @@
 		height: auto !important;
 		height: 1%;
 		position: relative;
-		
+
 		li {
 			float: left;
 			list-style: none;
@@ -63,27 +63,27 @@
 		}
 		.search-choice-focus {
 			background: #d4d4d4;
-			
+
 			.search-choice-close {
 				background-position: right -11px;
 			}
 		}
 	}
 
-	.chzn-drop {
+	.#{$base-class}-drop {
 		.result-selected {
 			display: none;
 		}
 	}
 
-	.chzn-results {
+	.#{$base-class}-results {
 		margin: -1px 0 0;
 		padding: 0;
 	}
 }
 
-.chzn-container-active {
-	.chzn-choices {
+.#{$base-class}-container-active {
+	.#{$base-class}-choices {
 		@include box-shadow(0 0 5px rgba(0,0,0,.3));
 		border: 1px solid #5897fb;
 
@@ -93,8 +93,8 @@
 	}
 }
 
-.chzn-disabled {
-	.chzn-choices .search-choice .search-choice-close {
+.#{$base-class}-disabled {
+	.#{$base-class}-choices .search-choice .search-choice-close {
 		cursor: default;
 	}
 }
