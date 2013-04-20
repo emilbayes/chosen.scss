@@ -1,3 +1,14 @@
+Warning
+=======
+_20. April 2013_: In one of the coming months I plan to rewrite this library to 
+be on par with developments in Sass and also make it more helpful when writing custom
+styles to Chosen. I'll therefore (most likely) break backwards compatibility and merge in a 2.0 branch.
+I have no idea of the userbase of this gem, but since its release in April 2012 it
+has been downloaded over 2,200 times. I have no plan for how long development of the 
+new version will last, but it will most likely be within the next couple of months.
+
+You can avoid any problems by tying to a specific version (`1.10`).
+
 Chosen.scss
 ===========
 Chosen.scss is a compass implementation of [Chosen](http://harvesthq.github.com/chosen/). It is currently based on Chosen `0.9.8`
